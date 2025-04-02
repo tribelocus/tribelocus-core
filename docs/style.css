@@ -154,6 +154,17 @@ footer {
     background-color: #ddd;
   }
 
+  a,
+a:visited {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #333;
+}
+
+
   .step {
     border-top: 1px solid #222;
   }
