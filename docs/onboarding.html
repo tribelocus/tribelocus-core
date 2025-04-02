@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Begin – TribeLocus</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      text-align: center;
+    }
+    .block {
+      max-width: 720px;
+      padding: 2rem;
+    }
+    .title {
+      font-size: 1.9rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+    .sentence {
+      font-size: 1.125rem;
+      color: #666;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 2.5s;
+      margin-bottom: 2.5rem;
+    }
+    .button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #1a1a1a;
+      color: #fff;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+    .button:hover {
+      background-color: #333;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    @media (max-width: 600px) {
+      .title { font-size: 1.6rem; }
+      .sentence { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="block">
+    <div class="title">Would you like to begin your own reflection?</div>
+    <div class="sentence">There’s no signup. No pressure. Just a chance to speak honestly.</div>
+    <a href="speak.html" class="button">Begin</a>
+  </div>
+</body>
+</html>
