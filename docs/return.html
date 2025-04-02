@@ -14,16 +14,27 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      overflow: hidden;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
     .block {
-      position: absolute;
-      text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       opacity: 0;
       transition: opacity 1s ease-in;
       max-width: 90%;
+      padding: 1rem;
     }
     .block.show {
+      display: flex;
       opacity: 1;
     }
     h1 {
@@ -56,21 +67,23 @@
   </style>
 </head>
 <body>
-  <div class="block" id="block1">
-    <h1>You spoke.</h1>
-    <p>We heard you. Every word remains yours.</p>
-  </div>
-  <div class="block" id="block2">
-    <h1>Your voice carried emotion.</h1>
-    <p>Quiet strength. A trace of longing. Hope beneath it all.</p>
-  </div>
-  <div class="block" id="block3">
-    <h1>Would you like to keep walking?</h1>
-    <p>You can speak again. Or just rest here. We’ll still be listening.</p>
-    <div class="options">
-      <a href="/speak.html">Reflect Again</a>
-      <a href="/reflections.html">Rest + Read</a>
-      <a href="/index.html">Return Home</a>
+  <div class="container">
+    <div class="block" id="block1">
+      <h1>You spoke.</h1>
+      <p>We heard you. Every word remains yours.</p>
+    </div>
+    <div class="block" id="block2">
+      <h1>Your voice carried emotion.</h1>
+      <p>Quiet strength. A trace of longing. Hope beneath it all.</p>
+    </div>
+    <div class="block" id="block3">
+      <h1>Would you like to keep walking?</h1>
+      <p>You can speak again. Or just rest here. We’ll still be listening.</p>
+      <div class="options">
+        <a href="/speak.html">Reflect Again</a>
+        <a href="/reflections.html">Rest + Read</a>
+        <a href="/index.html">Return Home</a>
+      </div>
     </div>
   </div>
 
@@ -83,6 +96,9 @@
 
     let index = 0;
     function showNextBlock() {
+      if (index > 0) {
+        blocks[index - 1].classList.remove('show');
+      }
       if (index < blocks.length) {
         blocks[index].classList.add('show');
         index++;
