@@ -26,7 +26,7 @@ It allows people to speak freely — to themselves, to AI, or to a trusted guide
 
 This repository contains:
 
-- [tribelocus-docs-complete](./tribelocus-docs-complete)— All core system documentation, written with presence and emotional clarity
+- [main](./tribelocus-docs-complete)— All core system documentation, written with presence and emotional clarity
 - API and backend logic (voice input, tone analysis, trust-based feedback)
 - Architecture guides for AWS, S3, Lambda, and GPT-4o integration
 - Trainer, admin, and contributor onboarding materials
