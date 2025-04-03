@@ -40,9 +40,9 @@ All development here follows first principles: slow, human-centered, and deeply 
 We're preparing a soft public-facing launch.
 
 For now, if you're curious:
-- Start with [`/tribelocus-docs-complete/index.md`](./index.md)
-- Read [`/tribelocus-docs-complete/principles.md`](./principles.md)
-- Reflect on [`/tribelocus-docs-complete/contributing.md`](./contributing.md)
+- Start with [`tribelocus-docs-complete/index.md`](./index.md)
+- Read [`tribelocus-docs-complete/principles.md`](./principles.md)
+- Reflect on [`tribelocus-docs-complete/contributing.md`](./contributing.md)
 
 We're not looking for volume. We're looking for alignment.
 
