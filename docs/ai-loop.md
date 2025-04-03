@@ -32,9 +32,9 @@ TribeLocus uses a blend of Whisper and GPT-4o to hear:
 
 The system doesn't interrupt. It waits. Then it reflects what it noticed — softly, respectfully.
 
-Examples:
-- “It sounds like you’re holding a lot today.”
-- “You paused. That pause matters.”
+Examples:  
+- “It sounds like you’re holding a lot today.”  
+- “You paused. That pause matters.”  
 - “There’s a calm here. You might want to stay with it.”
 
 ---
@@ -99,6 +99,19 @@ Users can:
 - Choose when and whether their reflections are shared
 
 No feedback is ever shown unless it’s invited.
+
+---
+
+## A Note on Inclusion
+
+The AI Loop is designed to meet people as they are.
+
+- There is no expected rhythm.
+- There is no “normal” emotional pattern.
+- Neurodiverse and nonverbal rhythms are welcome.
+- Emotional pacing is not evaluated — it is witnessed.
+
+TribeLocus learns from each person, not about them.
 
 ---
 
