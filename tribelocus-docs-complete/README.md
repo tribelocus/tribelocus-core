@@ -40,9 +40,9 @@ All development here follows first principles: slow, human-centered, and deeply 
 We're preparing a soft public-facing launch.
 
 For now, if you're curious:
-- Start with [`/docs/index.md`](./docs/index.md)
-- Read [`/docs/principles.md`](./docs/principles.md)
-- Reflect on [`/docs/contributing.md`](./docs/contributing.md)
+- Start with [`index.md`](./docs/index.md)
+- Read [`principles.md`](./docs/principles.md)
+- Reflect on [`contributing.md`](./docs/contributing.md)
 
 We're not looking for volume. We're looking for alignment.
 
