@@ -92,3 +92,4 @@ This is not just a system. It’s a place where someone’s truth is heard.
 We deploy it the same way we built it — one breath at a time, with reverence for what it holds.
 
 If a tool or process does not align with human dignity, we leave it out. That is the deployment standard.
+
