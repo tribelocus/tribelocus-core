@@ -53,5 +53,37 @@ TribeLocus is composed of five primary layers:
 
 ---
 
-## Diagram (Optional for Later)
+## Diagram (Conceptual)
+
+```
+[User] → [Voice Input] → [Tone Engine] → [Reflection/Nudge Output]
+                                ↓
+                       [S3 / Consent-Storage]
+                                ↓
+                   [Trainer/Admin Insights (Optional)]
+```
+
+Trainer and admin insights are only available when the user has explicitly consented to share a reflection. This layer never activates without that clear permission.
+
+---
+
+## Philosophy Behind the Stack
+
+We use what is stable, proven, and transparent. No black boxes. No hidden logic.
+
+The goal isn’t to build fast. It’s to build right — with presence, security, and respect at the core.
+
+If a tool doesn't honor that, we don’t use it.
+
+---
+
+## In Closing
+
+This system isn’t just technical. It’s ethical.
+
+Every architectural decision was made with one question in mind:
+
+> *Does this protect the person on the other side of the voice?*
+
+If the answer isn’t yes, we redesign it — until it is.
 
