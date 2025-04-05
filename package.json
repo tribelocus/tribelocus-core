@@ -1,0 +1,25 @@
+{
+  "name": "tribelocus-core",
+  "version": "1.0.0",
+  "description": "Welcome.",
+  "main": "next.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tribelocus/tribelocus-core.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tribelocus/tribelocus-core/issues"
+  },
+  "homepage": "https://github.com/tribelocus/tribelocus-core#readme",
+  "dependencies": {
+    "next": "^15.2.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
