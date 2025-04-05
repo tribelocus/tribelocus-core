@@ -14,10 +14,10 @@ TribeLocus is a place to pause.
 
 It allows people to speak freely — to themselves, to AI, or to a trusted guide — and receive quiet, respectful reflection. No performance. No tracking. Just presence.
 
-- Voice-first reflection with tone awareness
-- Real-time emotional feedback
-- Consent-based storage and sharing
-- AI companionship rooted in care
+- Voice-first reflection with tone awareness  
+- Real-time emotional feedback  
+- Consent-based storage and sharing  
+- AI companionship rooted in care  
 - Moderation built on dignity, not control
 
 ---
@@ -26,10 +26,10 @@ It allows people to speak freely — to themselves, to AI, or to a trusted guide
 
 This repository contains:
 
-- `/docs` — All core system documentation, written with presence and emotional clarity
-- API and backend logic (voice input, tone analysis, trust-based feedback)
-- Architecture guides for AWS, S3, Lambda, and GPT-4o integration
-- Trainer, admin, and contributor onboarding materials
+- `/docs` — All core system documentation, written with presence and emotional clarity  
+- API and backend logic (voice input, tone analysis, trust-based feedback)  
+- Architecture guides for AWS, S3, Lambda, and GPT-4o integration  
+- Trainer, admin, and contributor onboarding materials  
 
 All development here follows first principles: slow, human-centered, and deeply intentional.
 
@@ -40,9 +40,9 @@ All development here follows first principles: slow, human-centered, and deeply 
 We're preparing a soft public-facing launch.
 
 For now, if you're curious:
-- Start with [`index.md`](./index.md)
-- Read [`principles.md`](./principles.md)
-- Reflect on [`contributing.md`](./contributing.md)
+- Start with [`index.md`](./docs/index.md)  
+- Read [`principles.md`](./docs/principles.md)  
+- Reflect on [`contributing.md`](./docs/contributing.md)
 
 We're not looking for volume. We're looking for alignment.
 
