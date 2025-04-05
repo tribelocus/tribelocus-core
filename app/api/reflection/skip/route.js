@@ -1,4 +1,4 @@
-// /pages/api/reflection/skip.js
-export default function handler(req, res) {
-  // ... [code omitted for brevity]
+export async function POST() {
+  console.log("[SKIP] User opted out of reflection.");
+  return new Response(null, { status: 204 });
 }
