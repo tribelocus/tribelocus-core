@@ -13,16 +13,21 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-black text-white text-center px-4">
-      <div>
-        <h1 className="text-4xl font-bold mb-4">Test Block</h1>
-        {visible && (
-          <p className="text-lg text-gray-400 max-w-xl mx-auto">
-            This paragraph appeared after 3 seconds.
-          </p>
-        )}
+    <div className="h-screen w-screen flex items-center justify-center bg-black text-white">
+      <div className="flex flex-col items-center text-center px-4">
+        <h1 className="text-4xl font-semibold mb-4 min-h-[3.5rem]">
+          Test Block
+        </h1>
+  
+        <div className="min-h-[4.5rem]">
+          {visible && (
+            <p className="text-lg text-gray-400 max-w-xl mx-auto">
+              This paragraph appeared after 3 seconds.
+            </p>
+          )}
+        </div>
       </div>
     </div>
-  );
+  );  
 }
 
