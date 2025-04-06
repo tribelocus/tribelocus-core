@@ -28,68 +28,79 @@ const blocks = [
 
 export default function Home() {
   const [index, setIndex] = useState(0);
-  const [showSubtitle, setShowSubtitle] = useState(false);
+  const [phase, setPhase] = useState<"title" | "subtitle" | "transition">("title");
 
   useEffect(() => {
-    console.log("Rendered block index:", index);
-    setShowSubtitle(false);
+    let subtitleTimeout: NodeJS.Timeout;
+    let transitionTimeout: NodeJS.Timeout;
+    let nextBlockTimeout: NodeJS.Timeout;
 
-    const subtitleDelay = setTimeout(() => {
-      setShowSubtitle(true);
-      console.log("Subtitle revealed for block:", index);
+    console.log("🪶 Showing title for block:", index);
+    setPhase("title");
+
+    subtitleTimeout = setTimeout(() => {
+      console.log("💬 Subtitle appears for block:", index);
+      setPhase("subtitle");
     }, 3000);
 
-    const nextBlockDelay = setTimeout(() => {
-      if (index < blocks.length - 1) {
-        console.log("Advancing to block:", index + 1);
-        setIndex(index + 1);
-      }
+    transitionTimeout = setTimeout(() => {
+      console.log("🌑 Fading to black...");
+      setPhase("transition");
     }, 7000);
 
+    nextBlockTimeout = setTimeout(() => {
+      if (index < blocks.length - 1) {
+        console.log("⏭ Moving to next block:", index + 1);
+        setIndex(index + 1);
+      }
+    }, 8500); // 7s + 1.5s
+
     return () => {
-      clearTimeout(subtitleDelay);
-      clearTimeout(nextBlockDelay);
+      clearTimeout(subtitleTimeout);
+      clearTimeout(transitionTimeout);
+      clearTimeout(nextBlockTimeout);
     };
   }, [index]);
 
+  const current = blocks[index];
+
   return (
-    <div className="h-screen w-screen bg-black text-white flex items-center justify-center overflow-hidden">
+    <div className="h-screen w-screen bg-black text-white flex items-center justify-center">
       <AnimatePresence mode="wait">
-        <motion.div
-          key={index}
-          layout
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.6 }}
-          onAnimationStart={() => console.log("Animation started for:", index)}
-          onAnimationComplete={() => console.log("Animation complete for:", index)}
-          className="flex flex-col items-center text-center max-w-xl px-6 w-full"
-        >
-          <motion.h1
-            layout
+        {phase === "transition" ? (
+          <motion.div
+            key={`transition-${index}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl font-semibold mb-4 min-h-[3.5rem]"
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="absolute inset-0 bg-black"
+          />
+        ) : (
+          <motion.div
+            key={`block-${index}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center px-6 max-w-xl w-full"
           >
-            {blocks[index].title}
-          </motion.h1>
+            <h1 className="text-4xl font-semibold mb-4 min-h-[3.5rem]">{current.title}</h1>
 
-          <div className="min-h-[4.5rem]">
-            {showSubtitle && (
-              <motion.p
-                layout
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8 }}
-                className="text-xl text-white/80 max-w-2xl mx-auto"
-              >
-                {blocks[index].text}
-              </motion.p>
-            )}
-          </div>
-        </motion.div>
+            <div className="min-h-[4.5rem]">
+              {phase === "subtitle" && (
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8 }}
+                  className="text-xl text-white/80 max-w-2xl mx-auto"
+                >
+                  {current.text}
+                </motion.p>
+              )}
+            </div>
+          </motion.div>
+        )}
       </AnimatePresence>
     </div>
   );
