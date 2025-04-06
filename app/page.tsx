@@ -42,7 +42,7 @@ export default function Home() {
     const nextBlockDelay = setTimeout(() => {
       if (index < blocks.length - 1) {
         console.log("Advancing to block:", index + 1);
-        setIndex((prev) => prev + 1);
+        setIndex(index + 1);
       }
     }, 7000);
 
@@ -75,7 +75,7 @@ export default function Home() {
           >
             {blocks[index].title}
           </motion.h1>
-  
+
           <div className="min-h-[4.5rem]">
             {showSubtitle && (
               <motion.p
@@ -92,5 +92,5 @@ export default function Home() {
         </motion.div>
       </AnimatePresence>
     </div>
-  );  
+  );
 }
