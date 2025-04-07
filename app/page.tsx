@@ -10,19 +10,19 @@ const blocks = [
   },
   {
     title: "You Speak.",
-    text: "Your voice matters here. Nothing is stored unless you ask us to.",
+    text: "Your voice matters here. Nothing is stored< br/> unless you ask us to.",
   },
   {
     title: "We Listen.",
-    text: "Tone, rhythm, silence — we reflect what is felt, not just said.",
+    text: "Tone, rhythm, silence — we reflect what is felt,< br/> not just said.",
   },
   {
     title: "You Choose.",
-    text: "Save it. Let it go. Share it with someone you trust. You're in control.",
+    text: "Save it. Let it go. Share it with someone you trust.< br/> You're in control.",
   },
   {
     title: "We Walk With You.",
-    text: "This is not a product. It's a path. You are welcome here.",
+    text: "This is not a product. It's a path.< br/> You are welcome here.",
   },
 ];
 
