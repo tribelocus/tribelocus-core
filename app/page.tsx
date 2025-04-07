@@ -6,11 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const blocks = [
   {
     title: "You Arrived.",
-    text: "This is the quiet heart of TribeLocus.\nA space for presence — not performance.",
+    text: "This is the quiet heart of TribeLocus. A space for presence\n— not performance.",
   },
   {
     title: "You Speak.",
-    text: "Your voice matters here.\nNothing is stored unless you ask us to.",
+    text: "Your voice matters here. Nothing is stored\nunless you ask us to.",
   },
   {
     title: "We Listen.",
@@ -22,7 +22,7 @@ const blocks = [
   },
   {
     title: "We Walk With You.",
-    text: "This is not a product.\nIt's a path. You are welcome here.",
+    text: "This is not a product. It's a path.\nYou are welcome here.",
   },
 ];
 
