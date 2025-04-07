@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const blocks = [
   {
     title: "You Arrived.",
-    text: "This is the quiet heart of TribeLocus — a space for presence, not performance.",
+    text: "This is the quiet heart of TribeLocus — a space for presence,< br/>not performance.",
   },
   {
     title: "You Speak.",
